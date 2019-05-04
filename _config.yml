@@ -1,0 +1,17 @@
+baseurl: /
+
+repository: Gothor/asoubou-website
+
+timezone: Europe/Paris
+
+collections:
+  Japon: { output: true }
+  Jeux:  { output: true }
+
+defaults:
+  - scope: { path: "", type: "Japon" }
+    values:
+      layout: "video"
+  - scope: { path: "", type: "Jeux" }
+    values:
+      layout: "video"

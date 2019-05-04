@@ -1,0 +1,46 @@
+
+html, body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3em;
+  margin: 0.5em 0 0.3em;
+}
+
+a {
+  color: $mainColor;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#latestJapanVideo,
+#latestGameVideo {
+  background-color: $mainColor;
+  width: 45%;
+  padding: 1em;
+  box-sizing: padding-box;
+  border-radius: 10px;
+  display:inline-block;
+
+  h2 {
+    color: white;
+    margin: 0 0 0.5em;
+  }
+
+  iframe {
+    max-width: 100%;
+    max-height: 300px;
+  }
+}

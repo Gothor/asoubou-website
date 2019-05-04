@@ -1,0 +1,29 @@
+.video-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.video-block {
+  text-align: center;
+  width: calc(30% - 2em);
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 15px 10px -10px #ddd;
+  padding: 1em;
+  margin-bottom: 2em;
+  transition: box-shadow 0.2s ease-in-out;
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0 5px 10px 0 #ddd;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .title {
+    display: block;
+    text-align: left;
+  }
+}

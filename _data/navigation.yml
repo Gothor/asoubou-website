@@ -1,0 +1,6 @@
+- name: Accueil
+  link: /
+- name: Japon
+  link: /Japon
+- name: Jeux
+  link: /Jeux

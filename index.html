@@ -1,0 +1,28 @@
+---
+layout: base
+---
+
+<h1>Asoubou</h1>
+
+<p>Bonjour et bienvenue sur le site d'Asoubou !</p>
+
+{% assign japanVideos = site.Japon %}
+{% assign latestJapanVideo = japanVideos[-2] %}
+{% assign gameVideos = site.Jeux %}
+{% assign latestGameVideo = gameVideos[-2] %}
+
+<div id="latestJapanVideo">
+  <h2>Dernière vidéo sur le Japon</h2>
+
+  {% if latestJapanVideo.video_id != null %}
+    {% include video.html video_id=latestJapanVideo.video_id %}
+  {% endif %}
+</div>
+
+<div id="latestGameVideo">
+  <h2>Dernière vidéo sur les jeux</h2>
+
+  {% if latestGameVideo.video_id != null %}
+    {% include video.html video_id=latestGameVideo.video_id %}
+  {% endif %}
+</div>
