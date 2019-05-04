@@ -5,3 +5,49 @@ layout: base
 {{ content }}
 
 {% include video.html video_id=page.video_id %}
+
+{% if page.sources != null %}
+  <h2>Sources</h2>
+
+  <ul class="sources">
+    {% for source in page.sources %}
+      <li>
+        {% if source.url %}<a href="{{ source.url }}">{% endif %}
+          {% comment %} Article {% endcomment %}
+          {% if source.type == "article" %}
+            {% if source.url %}<a href="{{ source.url }}">{% endif %}
+              {{ source.author }},
+              &#171; {{ source.title }} &#xBB; ,
+              dans
+              {% if source.editor %}{{ source.editor }} ,{% endif %}
+              <em>{{ source.book }}</em>
+              {% if source.city %}, {{ source.city }}{% endif %}
+              {% if source.year %}, {{ source.year }}{% endif %}
+              {% if source.page_first != null and source.page_last != null %}
+                , pp. {{ source.page_first }}-{{ source.page_last }}
+              {% elsif source.page %}
+                , p. {{ source.page }}
+              {% endif %}
+            {% if source.url %}</a>{% endif %}
+          {% comment %} Livre {% endcomment %}
+          {% elsif source.type == "book" %}
+            {% if source.url %}<a href="{{ source.url }}">{% endif %}
+              {{ source.author }},
+              <em>{{ source.title }}</em>
+              {% if source.city %}, {{ source.city }}{% endif %}
+              {% if source.editor %}, {{ source.editor }}{% endif %}
+              {% if source.year %}, {{ source.year }}{% endif %}
+            {% if source.url %}</a>{% endif %}
+          {% comment %} Lien ou nom uniquement {% endcomment %}
+          {% else %}
+              {% if source.title != null %}
+                {{ source.title }}
+              {% else %}
+                {{ source.url }}
+              {% endif %}
+          {% endif %}
+        {% if source.url %}</a>{% endif %}
+      </li>
+    {% endfor%}
+  </ul>
+{% endif %}
