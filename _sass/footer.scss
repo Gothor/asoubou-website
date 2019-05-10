@@ -3,8 +3,19 @@ footer {
   margin-top: 3em;
   padding: 1em 0 1em;
 
+  .social-media {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 1em;
+    }
+  }
+
   .legal {
-    margin-top: 3em;
+    /* margin-top: 3em; */
     font-size: 0.6em;
     text-align: center;
   }

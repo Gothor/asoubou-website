@@ -4,6 +4,13 @@ repository: Gothor/asoubou-website
 
 timezone: Europe/Paris
 
+links:
+  youtube:   https://www.youtube.com/channel/UCInlRcOYH0chCOKcvTlFfog
+  twitch:    https://www.twitch.tv/asoubou
+  instagram: https://www.instagram.com/asoubou_insta/
+  facebook:  https://www.facebook.com/asoubou.jeux.et.japon/
+  twitter:   https://twitter.com/asoubou
+
 collections:
   Japon: { output: true }
   Jeux:  { output: true }
