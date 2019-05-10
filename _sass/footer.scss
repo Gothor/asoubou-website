@@ -1,3 +1,21 @@
+@keyframes shaking {
+  0% {
+      transform: rotate(0deg);
+  }
+  1.5% {
+    transform: rotate(-3deg);
+  }
+  4.5% {
+    transform: rotate(3deg);
+  }
+  6% {
+    transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
 footer {
   background-color: rgba(0, 0, 0, 0.1);
   margin-top: 3em;
@@ -11,6 +29,13 @@ footer {
     li {
       display: inline-block;
       margin: 0 1em;
+    }
+
+    a:hover img {
+      animation-name: shaking;
+      animation-duration: 2.5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
   }
 
