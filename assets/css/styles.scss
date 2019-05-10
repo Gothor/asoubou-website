@@ -2,6 +2,7 @@
 ---
 
 $mainColor: #a01b16;
+$backgroundImage: "{{ "/assets/img/background.png" | relative_url }}";
 
 @import "fonts";
 

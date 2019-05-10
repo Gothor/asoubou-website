@@ -1,8 +1,14 @@
-
 html, body {
   margin: 0;
   font-family: 'Oswald', sans-serif;
   font-size: 1.2em;
+}
+
+body {
+  background-image: url($backgroundImage);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .wrapper {
