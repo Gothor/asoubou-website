@@ -2,7 +2,8 @@
 ---
 
 $mainColor: #a01b16;
-$backgroundImage: "{{ "/assets/img/background.png" | relative_url }}";
+$backgroundGradient: "{{ "/assets/img/backgroundGradient.png" | relative_url }}";
+$backgroundPattern: "{{ "/assets/img/backgroundPattern.png" | relative_url }}";
 
 @import "fonts";
 

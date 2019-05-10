@@ -5,10 +5,10 @@ html, body {
 }
 
 body {
-  background-image: url($backgroundImage);
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
+  background-image: url($backgroundGradient), url($backgroundPattern);
+  background-position: center center, center center;
+  background-repeat: repeat-y, repeat;
+  background-size: contain, auto;
 }
 
 .wrapper {

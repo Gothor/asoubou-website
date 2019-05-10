@@ -1,5 +1,13 @@
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1920px) {
     
+    body {
+        background-size: auto, auto;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+
     #videoContainer {
         flex-direction: column;
     }
