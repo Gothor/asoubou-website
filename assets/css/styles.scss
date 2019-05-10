@@ -11,4 +11,6 @@ $backgroundImage: "{{ "/assets/img/background.png" | relative_url }}";
 @import "navigation";
 @import "footer";
 
-@import "video-block"
+@import "video-block";
+
+@import "responsive";

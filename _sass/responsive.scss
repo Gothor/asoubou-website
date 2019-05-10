@@ -1,0 +1,13 @@
+@media screen and (max-width: 900px) {
+    
+    #videoContainer {
+        flex-direction: column;
+    }
+
+    #latestJapanVideo,
+    #latestGameVideo {
+        width: auto;
+        margin-bottom: 1em;
+    }
+
+}

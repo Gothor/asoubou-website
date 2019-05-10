@@ -11,18 +11,20 @@ layout: base
 {% assign gameVideos = site.Jeux %}
 {% assign latestGameVideo = gameVideos[-2] %}
 
-<div id="latestJapanVideo">
-  <h2>Dernière vidéo sur le Japon</h2>
+<div id="videoContainer">
+  <div id="latestJapanVideo">
+    <h2>Dernière vidéo sur le Japon</h2>
 
-  {% if latestJapanVideo.video_id != null %}
+    {% if latestJapanVideo.video_id != null %}
     {% include video.html video_id=latestJapanVideo.video_id %}
-  {% endif %}
-</div>
+    {% endif %}
+  </div>
 
-<div id="latestGameVideo">
-  <h2>Dernière vidéo sur les jeux</h2>
+  <div id="latestGameVideo">
+    <h2>Dernière vidéo sur les jeux</h2>
 
-  {% if latestGameVideo.video_id != null %}
+    {% if latestGameVideo.video_id != null %}
     {% include video.html video_id=latestGameVideo.video_id %}
-  {% endif %}
+    {% endif %}
+  </div>
 </div>
