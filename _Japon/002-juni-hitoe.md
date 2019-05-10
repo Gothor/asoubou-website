@@ -2,7 +2,7 @@
 title: "Le Juni hitoe : Les kimonos à empiler"
 video_id: ZD6flCGSHQU
 sources:
-  - url: http://kasane.fuyuya.com/,
+  - url: http://kasane.fuyuya.com/
     type: link
   - title: Mistress of disguise
     url: https://mistress-of-disguise.blogspot.com/2012/11/heian-madness.html
