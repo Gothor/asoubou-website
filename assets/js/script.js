@@ -1,9 +1,9 @@
 const ratio = 1920/1080;
+let iframes;
 
-function resizeIframes() {
+function resizeIframes(hide) {
     for (let iframe of iframes) {
-        console.log(iframe);
-        iframe.style.display = "none";
+        if (hide) iframe.style.display = "none";
         requestAnimationFrame(function() {
             let parent = iframe.parentNode;
             let style = getComputedStyle(parent);
@@ -11,14 +11,15 @@ function resizeIframes() {
             w = parseInt(w);
             let h = w * (1 / ratio);
 
-            iframe.style.display = "initial";
+            if (hide) iframe.style.display = "initial";
             iframe.width = w;
             iframe.height = h;
         })
     }
 }
 
-let iframes = document.getElementsByTagName("iframe");
-resizeIframes();
-
-window.addEventListener("resize", resizeIframes);
+document.addEventListener('DOMContentLoaded', e => {
+    iframes = document.getElementsByTagName("iframe");
+    resizeIframes(true);
+    window.addEventListener("resize", resizeIframes);
+});
