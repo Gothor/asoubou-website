@@ -1,13 +1,14 @@
 .video-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .video-block {
   background-color: rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
   text-align: center;
-  width: calc(30% - 2em);
+  width: calc(33.3% - 1em);
   border-bottom: 1px solid #ddd;
   box-shadow: 0 15px 10px -10px #ddd;
   padding: 1em;
