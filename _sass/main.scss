@@ -84,6 +84,7 @@ a {
 .video-nav {
   display: flex;
   justify-content: space-between;
+  margin-top: 1em;
 
   .previous,
   .next {
@@ -94,5 +95,5 @@ a {
     padding: 0.4em 2em;
     border-radius: 3px;
   }
-  
+
 }
