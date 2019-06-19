@@ -1,0 +1,28 @@
+{% assign videos = site[page.collection] %}
+{% assign lastVideo = null %}
+{% assign previousVideoDone = false %}
+<div class="video-nav">
+    {% for video in videos %}
+        {% if video.url == page.url %}
+            {% if lastVideo != null %}
+                <a href="{{ lastVideo.url }}#nav" class="previous">Précédente</a>
+                {% assign previousVideoDone = true %}
+            {% endif %}
+        {% endif %}
+        {% assign lastVideo = video %}
+    {% endfor %}
+
+    {% if previousVideoDone != true %}
+        <span class="empty"></span>
+    {% endif %}
+
+    {% assign lastVideo = null %}
+    {% for video in videos %}
+        {% if lastVideo.url == page.url %}
+            {% if video.video_id != null %}
+                <a href="{{ video.url }}#nav" class="next">Suivante</a>
+            {% endif %}
+        {% endif %}
+        {% assign lastVideo = video %}
+    {% endfor %}
+</div>
