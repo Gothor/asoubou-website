@@ -22,6 +22,19 @@
         width: calc(50% - 0.5em);
     }
 
+    .gameVideo {
+        flex-direction: column;
+
+        .description {
+            margin: 0 1em;
+            border-radius: 0 0 5px 5px;
+            border-left: $secondaryColor 1px solid;
+            border-top: none;
+            box-shadow: 0 15px 10px -10px #ddd;
+        }
+    }
+
+}
 
 @media screen and (max-width: 640px) {
     

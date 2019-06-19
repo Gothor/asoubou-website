@@ -1,0 +1,6 @@
+{% if include.game.authors != null %}<span class="authors">, de 
+        {% assign count = 0 %}
+        {% for author in include.game.authors %}{% if last != null %}{% if count > 1 %}, {% endif %}{{ last }}{% endif %}{% assign last = author %}{% assign count = count | plus:1 %}{% endfor %}
+        {% if count > 1 %}et {% endif %} {{ last }}
+    </span>
+{% endif %}

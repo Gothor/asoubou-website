@@ -21,4 +21,4 @@ defaults:
       layout: "video"
   - scope: { path: "", type: "Jeux" }
     values:
-      layout: "video"
+      layout: "game_video"
