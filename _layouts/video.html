@@ -1,7 +1,17 @@
 ---
-layout: item
+layout: base
 ---
 
-{{ content }}
+<div class="videoContent">
+    <div class="video">
+        {% include video.html video_id=page.video_id %}
+    </div>
 
-{% include video.html video_id=page.video_id %}
+    <div class="description">
+        {{ content }}
+    </div>
+</div>
+
+{% include video-navigation.html %}
+
+{% include sources.html %}

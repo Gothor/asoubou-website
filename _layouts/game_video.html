@@ -1,27 +1,19 @@
 ---
-layout: item
+layout: video
 ---
 
-{{ content }}
-
-<div class="gameVideo">
-    <div class="video">
-        {% include video.html video_id=page.video_id %}
-    </div>
-
-    <div class="description">
-        <div>
-            <span class="name">{{ page.game.name }}</span>{% include printAuthors.html game=page.game %}
-        </div>
-
-        {% if page.game.min-players == page.game.max-players %}
-            <div class="players">Pour {{ page.game.min-players }} joueurs</div>
-        {% else %}
-            <div class="players">Pour {{ page.game.min-players }} à {{ page.game.max-players }} joueurs</div>
-        {% endif %}
-
-        {% if page.game.time != null %}
-            <div class="time">{{ page.game.time }}</div>
-        {% endif %}
-    </div>
+<div>
+    <span class="name">{{ page.game.name }}</span>{% include printAuthors.html game=page.game %}
 </div>
+
+{% if page.game.min-players == page.game.max-players %}
+    <div class="players">Pour {{ page.game.min-players }} joueurs</div>
+{% else %}
+    <div class="players">Pour {{ page.game.min-players }} à {{ page.game.max-players }} joueurs</div>
+{% endif %}
+
+{% if page.game.time != null %}
+    <div class="time">{{ page.game.time }}</div>
+{% endif %}
+
+{{ content }}
