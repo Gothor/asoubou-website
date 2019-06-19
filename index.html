@@ -2,29 +2,33 @@
 layout: base
 ---
 
-<h1>Asobou</h1>
+<h1>Qu'est-ce que c'est ?</h1>
 
-<p>Bonjour et bienvenue sur le site d'Asobou !</p>
+<p>Les jeux de plateaux regorgent de références à la culture japonaise. Approfondissons ensemble cette rencontre entre le monde ludique et le pays du soleil levant.</p>
 
 {% assign japanVideos = site.Japon %}
 {% assign latestJapanVideo = japanVideos[-2] %}
 {% assign gameVideos = site.Jeux %}
 {% assign latestGameVideo = gameVideos[-2] %}
 
+<h1>Nos dernières vidéos</h1>
+
 <div id="videoContainer">
   <div id="latestJapanVideo">
-    <h2>Dernière vidéo sur le Japon</h2>
+    <h2>Japon - {{ latestJapanVideo.title }}</h2>
 
     {% if latestJapanVideo.video_id != null %}
     {% include video.html video_id=latestJapanVideo.video_id %}
+    {{ latestJapanVideo.content | markdownify }}
     {% endif %}
   </div>
 
   <div id="latestGameVideo">
-    <h2>Dernière vidéo sur les jeux</h2>
+    <h2>Jeux - {{ latestGameVideo.game.name }}</h2>
 
     {% if latestGameVideo.video_id != null %}
     {% include video.html video_id=latestGameVideo.video_id %}
+    {{ latestGameVideo.content | markdownify }}
     {% endif %}
   </div>
 </div>
