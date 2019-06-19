@@ -5,7 +5,7 @@
     {% for video in videos %}
         {% if video.url == page.url %}
             {% if lastVideo != null %}
-                <a href="{{ lastVideo.url }}#nav" class="previous">Précédente</a>
+                <a href="{{ lastVideo.url | relative_url }}#nav" class="previous">Précédente</a>
                 {% assign previousVideoDone = true %}
             {% endif %}
         {% endif %}
@@ -20,7 +20,7 @@
     {% for video in videos %}
         {% if lastVideo.url == page.url %}
             {% if video.video_id != null %}
-                <a href="{{ video.url }}#nav" class="next">Suivante</a>
+                <a href="{{ video.url | relative_url }}#nav" class="next">Suivante</a>
             {% endif %}
         {% endif %}
         {% assign lastVideo = video %}
