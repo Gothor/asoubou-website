@@ -1,6 +1,6 @@
 ---
 title: "Kyogi karuta : duel de poème"
-video_id: GHPe1a5PE
+video_id: q-GHPe1a5PE
 game:
     name: "Kyogi Karuta"
     min-players: 2
